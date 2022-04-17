@@ -11,6 +11,7 @@ an executable
 local home_dir = vim.loop.os_homedir()
 local custom_config_package_path = home_dir .. "/.config/lvim/?.lua;"
 
+-- luacheck: globals package
 package.path =  custom_config_package_path .. package.path
 
 -- general
@@ -60,6 +61,8 @@ lvim.leader = "space"
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+-- 开启DAPinstall 插件
+lvim.builtin.dap.active =  true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -114,8 +117,10 @@ lvim.builtin.treesitter.highlight.enabled = true
 vim.opt.relativenumber = true
 
 -- resolution of the module
+-- luacheck: globals require
 require("configs.mappings")
 require("configs.formatters")
 require("configs.linters")
 require("configs.plugins")
 -- require("configs.which-key")
+require("configs.dap.init")

@@ -170,6 +170,7 @@ lvim.builtin.which_key = {
 		L = {
 			name = "+LunarVim",
 			c = {
+        -- luacheck: globals get_config_dir
 				"<cmd>edit " .. get_config_dir() .. "/config.lua<cr>",
 				"Edit config.lua",
 			},

@@ -64,4 +64,17 @@ lvim.plugins = {
 		"dhruvasagar/vim-table-mode",
 		cmd = "TableModeToggle",
 	},
+
+	-- debug 插件
+	{
+		"theHamsta/nvim-dap-virtual-text",
+	},
+
+  {
+    "rcarriga/nvim-dap-ui",
+  },
+
+  {
+    "nvim-telescope/telescope-dap.nvim",
+  }
 }
