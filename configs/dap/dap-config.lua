@@ -20,7 +20,7 @@ local function config_dapi_and_sign()
       numhl = "",
     },
     stopped = {
-      text = "⭐️", 
+      text = "⭐️",
       texthl = "LspDiagnosticsSignInformation",
       linehl = "DiagnosticUnderlineInfo",
       numhl = "LspDiagnosticsSignInformation",
@@ -62,7 +62,6 @@ end
 local function config_debuggers()
   -- load from json file
   require('dap.ext.vscode').load_launchjs(nil, {cppdbg = {'cpp'}})
-  
   -- config per launage
   -- require("configs.dap.dap-cpp")
   require("configs.dap.di-cpp")

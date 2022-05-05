@@ -19,6 +19,12 @@ lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 
+
+
+-- lvim.builtin.lualine.style = "lvim"
+
+
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 
@@ -123,4 +129,4 @@ require("configs.formatters")
 require("configs.linters")
 require("configs.plugins")
 -- require("configs.which-key")
-require("configs.dap.init")
+-- require("configs.dap.init")

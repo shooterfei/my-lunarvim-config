@@ -8,11 +8,11 @@ linters.setup({
 	},
 	{
 		-- each linter accepts a list of options identical to
-    -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+		-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 		command = "shellcheck",
 		---@usage arguments to pass to the formatter
 		-- these cannot contain whitespaces, options such as
-    -- `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+		-- `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
 		extra_args = { "--severity", "warning" },
 	},
 	{
@@ -21,8 +21,18 @@ linters.setup({
 		filetypes = { "javascript" },
 	},
 	{
+		command = "jsonlint",
+		---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+		filetypes = { "json" },
+		extra_args = { "--compact" },
+	},
+	{
 		command = "luacheck",
 		extra_args = { "--formatter", "plain", "--codes", "--ranges", "--filename", "$FILENAME", "-" },
 		filetypes = { "lua" },
+	},
+	{
+		command = "eslint",
+		filetypes = { "vue", "javascript" },
 	},
 })

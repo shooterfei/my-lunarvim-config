@@ -5,6 +5,9 @@ lvim.plugins = {
 	-- 	"folke/trouble.nvim",
 	-- 	cmd = "TroubleToggle",
 	-- },
+  -- {
+  --   "Pocco81/dap-buddy.nvim",
+  -- },
 	{
 		"tpope/vim-surround",
 	},
@@ -76,5 +79,6 @@ lvim.plugins = {
 
   {
     "nvim-telescope/telescope-dap.nvim",
-  }
+  },
+
 }
