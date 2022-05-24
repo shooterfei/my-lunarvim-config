@@ -33,5 +33,6 @@ lvim.keys.normal_mode[ "<F7>"] = "<cmd>lua require'dap'.step_into()<cr>"
 lvim.keys.normal_mode[ "<F8>"] = "<cmd>lua require'dap'.step_out()<cr>"
 lvim.keys.normal_mode[ "K"] = "<cmd>lua require'dapui'.eval()<cr>"
 
-
+lvim.keys.normal_mode["<leader>th"] = ":%!xxd <cr>"
+lvim.keys.normal_mode["<leader>tr"] = ":%!xxd -r <cr>"
 
