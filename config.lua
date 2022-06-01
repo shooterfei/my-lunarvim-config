@@ -100,7 +100,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- ---@usage Select which servers should be configured manually. Requires `:LvimCacheReset` to take effect.
 -- See the full default list `:lua print(vim.inspect(lvim.lsp.override))`
--- vim.list_extend(lvim.lsp.override, { "pyright" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "sumneko_lua" })
 
 -- ---@usage setup a server -- see: https://www.lunarvim.org/languages/#overriding-the-default-configuration
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
@@ -128,5 +128,7 @@ require("configs.mappings")
 require("configs.formatters")
 require("configs.linters")
 require("configs.plugins")
+
+
 -- require("configs.which-key")
 -- require("configs.dap.init")
